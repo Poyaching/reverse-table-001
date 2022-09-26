@@ -1,0 +1,20 @@
+<div class="container text-center">
+  <div class="row">
+    <div class="col rt-datatable-header" *ngFor="let item of header ; let i='index'">
+      <ng-container *ngTemplateOutlet="headerTemplate;
+                    context: { $implicit: item, index: i}"></ng-container>
+    </div>
+  </div>
+  <div class="col" *ngFor="let item of viewValues ; let i='index'">
+    <div class="row">
+      <ng-container *ngFor="let col of item">
+        <div class="col rt-datatable-field">
+          <ng-container *ngTemplateOutlet="fieldTemplate; context: { $implicit: col, index: i}"></ng-container>
+        </div>
+        <div class="col rt-datatable-body">
+          <ng-container *ngTemplateOutlet="bodyTemplate; context: { $implicit: col, index: i}"></ng-container>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

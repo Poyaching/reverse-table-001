@@ -1,0 +1,16 @@
+<app-reverse-table [header]="header" [values]="values" [columns]="3">
+  <ng-template rtTemplate="header" let-columns>
+    <p>{{columns}}</p>
+  </ng-template>
+  <ng-template rtTemplate="field" let-item let-index="index">
+    {{item.name }}
+  </ng-template>
+  <ng-template rtTemplate="body" let-item let-index="index">
+    <div *ngIf='item?.name===1; else elseT'>
+      <button type="button" class="btn btn-secondary btn-sm" (click)="item.commend()">click</button>
+    </div>
+    <ng-template #elseT>
+      {{item?.id}}
+    </ng-template>
+  </ng-template>
+</app-reverse-table>

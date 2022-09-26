@@ -1,0 +1,19 @@
+.rt-datatable-header {
+  border-style: solid;
+  border-width: 0.1px;
+
+}
+
+.rt-datatable-body {
+  border-style: solid;
+  border-width: 0.1px;
+
+}
+
+.rt-datatable-field {
+  border-style: solid;
+  background-color: brown;
+  color: aliceblue;
+  border-width: 0.1px;
+
+}
